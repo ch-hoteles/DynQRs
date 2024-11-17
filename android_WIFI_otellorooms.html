@@ -7,7 +7,7 @@
     <h1>Conéctate al Wi-Fi</h1>
     <div id="qrcode"></div>
     <script>
-        const wifiConfig = "WIFI:T:WPA;S:OTELLOROOMS;P:welcome2otellorooms;H:false;;";
+        const wifiConfig = "WIFI:T:WPA;S:UBIQUITI;P:668CB1D27EC6C15AEF14;H:false;;";
         QRCode.toCanvas(document.getElementById('qrcode'), wifiConfig, function (error) {
             if (error) console.error(error);
         });
