@@ -1,1 +1,22 @@
-WIFI:T:WPA;S:UBIQUITI;P:668CB1D27EC6C15AEF14;H:false;;
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+    <h1>Conéctate al Wi-Fi</h1>
+    <p>Escanea el código QR para conectarte automáticamente.</p>
+    <div id="qrcode"></div>
+    <p>O configura manualmente usando:</p>
+    <ul>
+        <li><strong>SSID:</strong> UBIQUITI</li>
+        <li><strong>Contraseña:</strong> 668CB1D27EC6C15AEF14</li>
+    </ul>
+    <script>
+        const wifiConfig = "WIFI:T:WPA;S:UBIQUITI;P:668CB1D27EC6C15AEF14;H:false;;";
+        QRCode.toCanvas(document.getElementById('qrcode'), wifiConfig, function (error) {
+            if (error) console.error(error);
+        });
+    </script>
+</body>
+</html>
